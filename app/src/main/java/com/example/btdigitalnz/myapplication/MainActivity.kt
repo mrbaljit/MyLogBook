@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
     fun performAction(v: View) {
         //require to import Button class
-        val btn = findViewById<Button>(R.id.btn_obs)
+        //val btn = findViewById<Button>(R.id.btn_obs)
         //require to import TypedValue class
         //set the button text style bold italic
         //btn.setTypeface(btn.getTypeface(), Typeface.BOLD_ITALIC)
