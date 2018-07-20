@@ -6,7 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ActivityObsForm">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
     <LinearLayout
+        android:nestedScrollingEnabled="true"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,6 +49,7 @@
             android:text="@string/title_patient_nhi"
             />
         <EditText
+            android:id="@+id/patient_nhi_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textCapCharacters"
@@ -67,9 +75,35 @@
             android:backgroundTint="#d11f08"
             android:entries="@array/planets_array"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-
           />
+
+        <TextView
+            android:id="@+id/patient_notes_text_obs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/title_category"
+            />
+
+        <EditText
+            android:id="@+id/patient_notes_obs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="200"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:lines="5"
+            android:gravity="top|left"
+            android:scrollHorizontally="false"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+
+            />
+
     </LinearLayout>
 
-
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
