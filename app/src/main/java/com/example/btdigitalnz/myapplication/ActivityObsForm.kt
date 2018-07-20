@@ -4,11 +4,15 @@ package com.example.btdigitalnz.myapplication
 import android.app.DatePickerDialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log.*
-import android.widget.Toast
+import android.view.View
 import kotlinx.android.synthetic.main.activity_obs_form.*
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Locale
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+
+
 
 
 class ActivityObsForm : AppCompatActivity() {
@@ -18,8 +22,17 @@ class ActivityObsForm : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_obs_form)
 
-   btn_show.setOnClickListener {
-       var formate = SimpleDateFormat("dd-MMM-YYYY",Locale.ENGLISH)
+        val spinner = findViewById<View>(R.id.spinner) as Spinner
+// Create an ArrayAdapter using the string array and a default spinner layout
+        val adapter = ArrayAdapter.createFromResource(this,
+                R.array.planets_array, android.R.layout.simple_spinner_item)
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice)
+// Apply the adapter to the spinner
+        spinner.adapter = adapter
+
+   btn_show_date.setOnClickListener {
+       var formate = SimpleDateFormat("dd-MMM-YYYY", Locale.ENGLISH)
        var now = Calendar.getInstance()
             val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
                 //val selectedDate = Calendar.getInstance()
@@ -27,21 +40,11 @@ class ActivityObsForm : AppCompatActivity() {
                 now.set(Calendar.MONTH,month)
                 now.set(Calendar.DAY_OF_MONTH,dayOfMonth)
                 val date = formate.format(now.time)
-                btn_show.text = date
-                d("myTag", "This is my message");
-              //  Toast.makeText(this,"date : " + date,Toast.LENGTH_LONG).show()
+                btn_show_date.text = date
             },
                     now.get(Calendar.YEAR),now.get(Calendar.MONTH),now.get(Calendar.DAY_OF_MONTH))
             datePicker.show()
-     /*  try {
-           if(btn_show.text != "Select Date") {
-               val date = formate.parse(btn_show.text.toString())
-               now.set(1999,10,8)
 
-           }
-       }catch (e:Exception){
-           e.printStackTrace()
-       }*/
    }
 
 

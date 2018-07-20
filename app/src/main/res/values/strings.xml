@@ -4,4 +4,15 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_obs">Obstetrics</string>
+    <string name="title_date">Date</string>
+    <string name="title_select_date">Select Date</string>
+    <string name="title_patient_nhi">Patient NHI</string>
+    <string name="title_category">Category</string>
+    <string-array name="planets_array">
+        <item>Adhesiolysis</item>
+        <item>Colposcopy</item>
+        <item>Dilation and Curettage</item>
+        <item>Endometrial Ablation</item>
+        <item>Endometrial or Uterine Biopsy</item>
+    </string-array>
 </resources>
