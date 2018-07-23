@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="46dp"
+        android:paddingTop="15dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
@@ -84,23 +84,21 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/title_category"
+            android:text="@string/title_notes_obs"
             />
 
         <EditText
             android:id="@+id/patient_notes_obs"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="200"
             android:inputType="textMultiLine"
             android:overScrollMode="always"
             android:scrollbarStyle="insideInset"
             android:scrollbars="vertical"
-            android:lines="5"
             android:gravity="top|left"
             android:scrollHorizontally="false"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-
             />
 
     </LinearLayout>

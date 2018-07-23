@@ -8,6 +8,7 @@
     <string name="title_select_date">Select Date</string>
     <string name="title_patient_nhi">Patient NHI</string>
     <string name="title_category">Category</string>
+    <string name="title_notes_obs">Notes</string>
     <string-array name="planets_array">
         <item>Adhesiolysis</item>
         <item>Colposcopy</item>
