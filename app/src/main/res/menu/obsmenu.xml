@@ -2,8 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/mybuttonbell"
-        android:title="Hellooo"
+        android:title="Save"
         app:showAsAction="always"
-        android:icon="@drawable/ic_notifications_black_24dp"
+
         />
 </menu>

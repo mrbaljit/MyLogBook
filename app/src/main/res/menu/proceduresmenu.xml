@@ -3,7 +3,5 @@
     <item
         android:id="@+id/mybuttonhome"
         android:title=""
-        app:showAsAction="always"
-        android:icon="@drawable/ic_home_black_24dp"
-        />
+        app:showAsAction="always" />
 </menu>
