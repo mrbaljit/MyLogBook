@@ -4,16 +4,15 @@ package com.example.btdigitalnz.myapplication
 import android.app.DatePickerDialog
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.*
 import kotlinx.android.synthetic.main.activity_obs_form.*
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-
-
 
 
 class ActivityObsForm : AppCompatActivity() {
@@ -59,6 +58,31 @@ class ActivityObsForm : AppCompatActivity() {
         menuInflater.inflate(R.menu.obsmenu, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here.
+        val id = item.itemId
+
+        if (id == R.id.opsSaveBtn) {
+            val edit = findViewById<EditText>(R.id.patient_nhi_number)
+            val pnotes = findViewById<EditText>(R.id.patient_notes_obs)
+            val catVal = findViewById<Spinner>(R.id.spinner)
+
+            val sDate = findViewById<Button>(R.id.btn_show_date)
+
+            Log.i("sDate        ",sDate.text.toString());
+            Log.i("nhi number   ",edit.text.toString());
+            Log.i("notes        ",pnotes.text.toString());
+            Log.i("catVal       ",catVal.selectedItem.toString());
+            Toast.makeText(this, edit.text, Toast.LENGTH_LONG).show()
+            return true
+        }
+
+
+        return super.onOptionsItemSelected(item)
+
+    }
+
 
 
 }
