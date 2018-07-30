@@ -4,6 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_obs">Obstetrics</string>
+    <string name="title_obs_log_title">Obstetrics Log Entry</string>
     <string name="title_date">Date</string>
     <string name="title_select_date">Select Date</string>
     <string name="title_patient_nhi">Patient NHI</string>

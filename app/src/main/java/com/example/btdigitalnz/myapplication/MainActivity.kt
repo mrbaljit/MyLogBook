@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import android.graphics.Typeface
+import android.view.Menu
 import android.view.View
 import android.widget.Button
 
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        setSupportActionBar(findViewById(R.id.my_toolbar))
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 
@@ -49,6 +50,12 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ActivityObsForm::class.java)
         startActivity(intent)
 
+    }
+
+    // create an action bar button
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.proceduresmenu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
 }
